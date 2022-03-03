@@ -17,22 +17,46 @@ public class QueueByArray {
         MyQueue myQueue1=new MyQueue(4);
         result=myQueue1.push(1);
         result=myQueue1.push(2);
-//        System.out.println("Queue pop value is: "+myQueue1.pop());
-//        System.out.println("Queue pop value is: "+myQueue1.pop());
         result=myQueue1.push(3);
         result=myQueue1.push(4);
-        myQueue1.showQueue();
-        System.out.println("The Queue count now is: "+myQueue1.count());
+        System.out.println("Queue pop value is: "+myQueue1.pop());
+        System.out.println("Queue pop value is: "+myQueue1.pop());
+
+        System.out.println("Max Size is: "+myQueue1.maxSize);
         result=myQueue1.push(5);
+        result=myQueue1.push(6);
+        result=myQueue1.push(7);
+        result=myQueue1.push(8);
+        result=myQueue1.push(9);
+        result=myQueue1.push(10);
+        result=myQueue1.push(11);
+        result=myQueue1.push(12);
+        System.out.println("Max Size is: "+myQueue1.maxSize);
+        myQueue1.showQueue();
+        System.out.println("The Queue count now is: "+myQueue1.count());
+        result=myQueue1.push(8);
         System.out.println("The Queue count now is: "+myQueue1.count());
         myQueue1.showQueue();
-        myQueue1.delete(3);
+//        System.out.println("Queue pop value is: "+myQueue1.pop());
+//        result=myQueue1.push(8);
+        myQueue1.delete(5);
+        myQueue1.showQueue();
         System.out.println("Queue pop value is: "+myQueue1.pop());
         System.out.println("The Queue count now is: "+myQueue1.count());
         System.out.println("Queue pop value is: "+myQueue1.pop());
         System.out.println("Queue pop value is: "+myQueue1.pop());
         System.out.println("Queue pop value is: "+myQueue1.pop());
         System.out.println("Queue pop value is: "+myQueue1.pop());
+        System.out.println("Queue pop value is: "+myQueue1.pop());
+        System.out.println("Queue pop value is: "+myQueue1.pop());
+        System.out.println("Queue pop value is: "+myQueue1.pop());
+        System.out.println("Queue pop value is: "+myQueue1.pop());
+        System.out.println("Queue pop value is: "+myQueue1.pop());
+        System.out.println("Max Size is: "+myQueue1.maxSize);
+        System.out.println("Top is: "+myQueue1.top +" Bottom is: "+ myQueue1.bottom);
+//        System.out.println("Queue pop value is: "+myQueue1.pop());
+
+
     }
 //    public static boolean push(int[] myArray, int value){
 //        if(myArray==null) {
