@@ -10,6 +10,8 @@ public class MyStack {
         this.myArray=new int[maxSize];
     }
     public boolean push(int pushValue){
+        
+        // can this ever happen? myArray is null?
         if(myArray==null) {
             System.out.println("Stack is null!");
             return false;
