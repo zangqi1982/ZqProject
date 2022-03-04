@@ -31,6 +31,7 @@ public class Node {
         }
     }
 
+    // TODO: let's move this to the right place, since it's not using current object
     boolean insertNode(Node head, Node targetNode, int nodeValue) {
         Node currNode=head;
         while(currNode!=null){
