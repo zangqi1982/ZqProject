@@ -3,17 +3,32 @@ package AverageOfInt;
 import java.util.Arrays;
 
 public class AvgCalculator {
-
-    public double sumValue;
-    public double avgValue;
     AvgCalculator(){
     }
     public int avgCeil(int value1, int value2){
-        return (int) Math.ceil((value1+value2)/2);
+        double diff_distance;
+        if(value2>=value1) {
+            diff_distance=(double)(value2-value1)/2;
+            if(diff_distance==(value2-value1)/2)
+                return value1 + (value2 - value1) / 2;
+            else
+                return value1 + (value2 - value1) / 2 + 1;
+        }
+        else {
+            diff_distance=(double)(value1-value2)/2;
+            if(diff_distance==(value1-value2)/2)
+                return value2 + (value1 - value2) / 2;
+            else
+                return value2 + (value1 - value2) / 2 + 1;
+        }
     }
     public int avgFloor(int value1, int value2){
-        return (int) Math.ceil((value1+value2)/2);
+        if(value2>=value1)
+            return value1+(value2-value1)/2;
+        else
+            return value2+(value1-value2)/2;
     }
+
 
 
     public void showArray(int[] myArray){

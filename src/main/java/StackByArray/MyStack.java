@@ -10,17 +10,8 @@ public class MyStack {
         this.myArray=new int[maxSize];
     }
     public boolean push(int pushValue){
-        
-        // can this ever happen? myArray is null?
-        if(myArray==null) {
-            System.out.println("Stack is null!");
-            return false;
-        }
         if(top==maxSize) {
             resizeArray();
-            myArray[top] = pushValue;
-            top=top+1;
-            return true;
         }
         myArray[top] = pushValue;
         top=top+1;
@@ -79,10 +70,10 @@ public class MyStack {
             }
         }
         top=top-index_delay;
+        myArray=tempArray;
         if(top<=maxSize/2){
             shrink();
         }
-        myArray=tempArray;
     }
     public void deleteOnce(int deletedValue){
         int[] tempArray = new int[maxSize];
@@ -98,10 +89,10 @@ public class MyStack {
             }
         }
         top=top-1;
+        myArray=tempArray;
         if(top<=maxSize/2){
             shrink();
         }
-        myArray=tempArray;
     }
     public void showStack(){
         for (int i=0;i<top;i++){
