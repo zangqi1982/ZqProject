@@ -22,6 +22,8 @@ public class AvgOfInt {
         System.out.println("The floor average is: "+myAvgCal.avgFloor(1,12));
         System.out.println("The ceil average is: "+myAvgCal.avgCeil(12,1));
         System.out.println("The floor average is: "+myAvgCal.avgFloor(12,1));
+        System.out.println("The ceil average is: "+myAvgCal.avgCeil(0,0));
+        System.out.println("The floor average is: "+myAvgCal.avgFloor(0,0));
 
         int[] myArray = new int[] {2, 1, 3, 4, 5, 7};
         myAvgCal.showArray(myArray);

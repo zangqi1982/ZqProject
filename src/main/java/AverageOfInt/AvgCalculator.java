@@ -3,8 +3,9 @@ package AverageOfInt;
 import java.util.Arrays;
 
 public class AvgCalculator {
-    AvgCalculator(){
-    }
+
+    // TODO: value1 is Int.VALUE_MAX , overflow, underflow 32
+    // Ceil division 3/2 = 2, floor 3/2 = 1, java default to floor
     public int avgCeil(int value1, int value2){
         double diff_distance;
         if(value2>=value1) {
@@ -22,6 +23,7 @@ public class AvgCalculator {
                 return value2 + (value1 - value2) / 2 + 1;
         }
     }
+    
     public int avgFloor(int value1, int value2){
         if(value2>=value1)
             return value1+(value2-value1)/2;
@@ -49,6 +51,7 @@ public class AvgCalculator {
         }
     }
 
+    // TODO: what happens if myArray length = 0
     public double mediumValue(int[] myArray){
         if(myArray == null){
             System.out.println("The Array is null!");
