@@ -1,5 +1,7 @@
 package BST;
 
+import com.sun.source.tree.Tree;
+
 public class BSTree {
 
     public static void main(String[] Args){
@@ -19,7 +21,7 @@ public class BSTree {
             System.out.println("Nothing was found!");
         else
             System.out.println("found the "+foundResult.getValue());
-
+        myBSTree.addNode(root,7);
     }
 
     public TreeNode createBSTbyArray(Integer[] myArray, int start, int end){
@@ -43,8 +45,15 @@ public class BSTree {
             return searchNode(root.right,val);
     }
 
-//    public TreeNode addNode(TreeNode root, int val){
-//    }
+    public void addNode(TreeNode root, int val){
+        TreeNode newNode = searchNode(root,val);
+        if(newNode==null){
+            newNode = new TreeNode(val);
+            System.out.println("New Node is added successfully!");
+        }else{
+            System.out.println("Node value is already exist!");
+        }
+    }
 
 
 }
